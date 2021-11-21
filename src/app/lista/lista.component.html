@@ -1,16 +1,68 @@
+
+
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" name="filterLista" placeholder="Buscar por título..." [(ngModel)]="filterLista">
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<div *ngIf="selectedCancion">
+  <div *ngIf="selectedCancion.id == 1">
+    <audio controls src="assets/1.mp3"  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 2">
+    <audio controls src='assets/2.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 3">
+    <audio controls src='assets/3.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 4">
+    <audio controls src='assets/4.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 5">
+    <audio controls src='assets/5.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 6">
+    <audio controls src='assets/6.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 7">
+    <audio controls src='assets/7.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 8">
+    <audio controls src='assets/8.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 9">
+    <audio controls src='assets/9.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 10">
+    <audio controls src='assets/10.mp3'  type="audio/mp3"></audio>
+  </div>
+  <div *ngIf="selectedCancion.id == 11">
+    <audio controls src='assets/11.mp3'  type="audio/mp3"></audio>
+  </div>
+</div>
+
 <span class="cabecero">Lista de canciones</span>
 <ul class ="cancion">
-    <li *ngFor= " let canciones of cancion"
+    <li *ngFor= "let canciones of cancion | filtro:filterLista"
       [class.selected]="canciones === selectedCancion"
       (click)="onSelect(canciones)">
       <span class="cancionId" style="font-weight: bold;">{{canciones.id}}</span>
       <span style="vertical-align: middle;">{{canciones.titulo}}</span>
       <span style="font-weight: bold;"> ({{canciones.autor}})&nbsp;</span>
-
     </li>
 </ul>
 
-<div *ngIf="selectedCancion">
+<!-- Si hay canción seleccionada y el filtro está vacío  o  si el filtro tiene algo y lo que se muestra es igual a la cancion seleccionada-->
+
+<div *ngIf=   "   (selectedCancion && filterLista == ''  ) || ( filterLista != '' &&  selectedCancion )   " >
+
+
 
     <h2>{{selectedCancion.titulo | uppercase}} </h2>
     <div>

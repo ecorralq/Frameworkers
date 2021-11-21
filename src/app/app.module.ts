@@ -4,11 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filtro/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    ListaComponent,
+    FilterPipe,
+
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Cancion } from '../cancion';
+import { FilterPipe } from '../filtro/filter.pipe';
 import { Lista } from '../lista';
+
 
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
+
+
 
 export class ListaComponent implements OnInit {
 
@@ -19,6 +24,8 @@ export class ListaComponent implements OnInit {
   }
 
   constructor() {}
+  filterLista = '';
+
 
   ngOnInit(): void {}
 
