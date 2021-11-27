@@ -5,12 +5,16 @@ import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filtro/filter.pipe';
+import { DetallesComponent } from './detalles/detalles.component';
+import { AudioComponent } from './audio/audio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
     FilterPipe,
+    DetallesComponent,
+    AudioComponent,
 
   ],
   imports: [
