@@ -1,0 +1,30 @@
+<div *ngIf="cancion">
+
+  <h2>{{cancion.titulo| uppercase}} </h2>
+
+  <table border="3" >
+    <tr>
+      <th style="text-align: left;"><b>ID </b></th>
+      <td style="width: 210px;">{{cancion.id}}</td>
+    </tr>
+    <tr>
+      <th style="text-align: left;"><b>Título</b></th>
+      <td>{{cancion.titulo}}</td>
+    </tr>
+    <tr>
+      <th style="text-align: left;"><b>Autor</b></th>
+      <td>{{cancion.autor}}</td>
+    </tr>
+    <tr>
+      <th style="text-align: left;"><b>Año</b></th>
+      <td>{{cancion.fecha}}</td>
+    </tr>
+    <tr>
+      <th style="text-align: left;"><b>Álbum</b></th>
+      <td>{{cancion.album}}</td>
+    </tr>
+    <tr>
+      <th style="text-align: left;"><b>Género</b></th>
+      <td>{{cancion.estilo}}</td>
+    </tr>
+  </table>

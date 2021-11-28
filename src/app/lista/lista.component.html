@@ -1,0 +1,21 @@
+
+
+<br>
+  <div class="container">
+          <input  style="width: 270px" type="text" class="form-control" name="filterLista" placeholder="Buscar por título o autor..." [(ngModel)]="filterLista">
+  </div>
+<br>
+
+<app-audio [cancion]="selectedCancion"></app-audio>
+
+<span class="cabecero">Lista de canciones</span>
+<ul class ="cancion">
+    <li *ngFor= "let canciones of cancion | filtro:filterLista"
+      [class.selected]="canciones === selectedCancion"
+      (click)="onSelect(canciones)">
+      <span class="cancionId" style="font-weight: bold;">{{canciones.id}}</span>
+      <span style="vertical-align: middle;">{{canciones.titulo}}</span>
+      <span style="font-weight: bold;"> ({{canciones.autor}})&nbsp;</span>
+    </li>
+</ul>
+<app-detalles [cancion]="selectedCancion" ></app-detalles>
