@@ -8,11 +8,10 @@ import { Cancion } from '../cancion';
 })
 export class AudioComponent implements OnInit {
 
-  @Input() cancion!: Cancion;
+  @Input() cancion: Cancion;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

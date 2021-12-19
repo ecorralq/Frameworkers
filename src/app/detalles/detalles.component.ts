@@ -1,6 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Cancion } from '../cancion';
-
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-detalles',
@@ -9,10 +7,9 @@ import { Cancion } from '../cancion';
 })
 export class DetallesComponent implements OnInit {
 
-@Input() cancion!: Cancion;
-
+@Input() cancion: any = null;
+@Output() cerrar= new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
-
 }

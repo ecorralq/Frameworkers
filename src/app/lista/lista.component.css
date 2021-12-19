@@ -8,7 +8,7 @@
 
 .cancion{
   list-style-type: none;
-  padding: 0;
+  padding: 0px;
   width:max-content;
 }
 
@@ -16,8 +16,8 @@
   cursor: pointer;
   position: relative;
   background-color: rgb(196, 181, 181);
-  margin: 0.5em;
-  height: 1.3em;
+  margin: 0.4em;
+  height: 1.5em;
   border-radius: 5px;
 }
 
@@ -31,35 +31,13 @@
   display: inline-block;
   font-size: small;
   color: wheat;
-  padding: 0 0 0 0;
+  padding: 1px 1px 1px 1px;
   background-color:rgb(0, 0, 0) ;
-  line-height: 1.3em;
+  line-height: 1.5em;
   position: relative;
   height: 1.3em;
   margin-right: .5em;
   border-radius: 4px 0 0 4px;
   width:20px;
   text-align: center;
-}
-
-/*botones*/
-.button {
-  background-color:#708090;
-  border:black;
-  color: white;
-  height: 14px;
-  width: 40px;
-  line-height: 14px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
-  margin: 2px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-.buttonHide{
-  max-height: 0;
-  opacity: 0;
 }

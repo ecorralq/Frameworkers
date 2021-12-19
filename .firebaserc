@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "frameworkers-2a05b": {
+      "hosting": {
+        "Frameworkers": [
+          "frameworkers-2a05b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "frameworkers-2a05b"
+  }
+}

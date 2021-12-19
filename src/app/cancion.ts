@@ -1,8 +1,8 @@
 export interface Cancion{
-  id:number;
-  titulo:string;
-  autor:string;
-  fecha:number;
-  album:string;
-  estilo:string;
+  ID:string;
+  TITULO:string;
+  AUTOR:string;
+  FECHA:number;
+  ALBUM:string;
+  ESTILO:string;
 }

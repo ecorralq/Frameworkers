@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-
 @Pipe({
   name: 'filtro'
 })
@@ -10,7 +9,7 @@ export class FilterPipe implements PipeTransform {
     if (arg === '' || arg.length < 2) return value;
     const resultLista = [];
     for (const canciones of value) {
-      if ((canciones.titulo.toLowerCase().indexOf(arg.toLowerCase()) > -1 )||(canciones.autor.toLowerCase().indexOf(arg.toLowerCase()) > -1 )) {
+      if ((canciones.TITULO.toLowerCase().indexOf(arg.toLowerCase()) > -1 )||(canciones.AUTOR.toLowerCase().indexOf(arg.toLowerCase()) > -1 )) {
         resultLista.push(canciones);
       };
     };
